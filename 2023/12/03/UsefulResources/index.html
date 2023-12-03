@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+    <meta name="keywords" content="impcb" />
+    <title>
+        ZhImpcb
+    </title>
+    <!-- favicon -->
+     
+<link rel="stylesheet" href="/css/style.css">
+
+
+    <!-- highlight -->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.12.0/styles/github-gist.min.css" />
+    <script src="//cdn.bootcss.com/highlight.js/9.2.0/highlight.min.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad()
+    </script>
+    <script src="https://cdn.jsdelivr.net/gh/frontendsophie/hexo-infinite-scroll@2.0.0/dist/main.js"></script>
+
+    <script>
+        infiniteScroll()
+
+        window.addEventListener('DOMContentLoaded', function () {
+            const [
+                mainTitle,
+                mobileMenu,
+                mobileMainTitle,
+                mobileMenuBtn,
+                ipadMenuBtn,
+                aside,
+                closeBtn,
+            ] = getEle(
+                '#main-title',
+                '.mobile-menu',
+                '.mobile-menu h3',
+                '.mobile-menu button',
+                '.ipad-menu',
+                'aside',
+                'aside .close',
+            )
+            const io = new IntersectionObserver(entries => {
+                if (entries[0].intersectionRatio <= 0) {
+                    mobileMainTitle.classList.remove('invisibile')
+                } else {
+                    mobileMainTitle.classList.add('invisibile')
+                }
+            })
+            io.observe(mainTitle)
+
+            clickToggleAside(mobileMenuBtn)
+            clickToggleAside(ipadMenuBtn)
+            clickToggleAside(closeBtn, false)
+
+            const isMenuVisible = window.getComputedStyle(mobileMenu).display !== 'none'
+            if (isMenuVisible) document.body.style.background = 'none'
+
+            function getEle(...args) {
+                return args.map(arg => document.querySelector(arg))
+            }
+
+            function clickToggleAside(btn, show = true) {
+                btn.addEventListener('click', function () {
+                    if (show) {
+                        aside.style.display = 'block'
+                    } else {
+                        aside.style.display = 'none'
+                    }
+                })
+            }
+        })
+    </script>
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+<body style="background: url(https://cdn.jsdelivr.net/gh/frontendsophie/hexo-theme-autumn@1.0.0/source/img/button-bg.png) #f3f3f3">
+    <div class="container">
+        <header class="header">
+    <nav class="mobile-menu" style="background: url(https://cdn.jsdelivr.net/gh/frontendsophie/hexo-theme-autumn@1.0.0/source/img/button-bg.png) #f3f3f3">
+        <h3 class="invisibile">
+            <a href="/" class="logo">
+                ZhImpcb
+            </a>
+        </h3>
+        <button class="menu">menu</button>
+    </nav>
+
+    <button class="ipad-menu menu">menu</button>
+
+    <h1 class="title" id="main-title">
+        <a href="/" class="logo">
+            ZhImpcb
+        </a>
+    </h1>
+    <h2 class="desc">
+        Zhuhai institute of math physics chemistry and biology
+    </h2>
+
+    <div class="links">
+        <ul>
+            
+            <li>
+                <a target="_blank" rel="noopener" href="https://github.com/zhimpcb">
+                    Github
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+</header>
+        <main class="main">
+            <article class="post">
+    
+    
+    
+    <h2 class="post-title">
+        Useful Resources
+    </h2>
+    <ul class="post-date">
+        <li>
+            2023-12-03
+        </li>
+        <li>
+            Zh Impcb
+        </li>
+    </ul>
+    <div class="post-content">
+        <h1 id="Vedios"><a href="#Vedios" class="headerlink" title="Vedios"></a>Vedios</h1><p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1GE411M7Q5/?spm_id_from=333.999.0.0&vd_source=b2af0f3a3b7d9e780991e4bef731fc85"><code>高等代数025 - 有理根的求解</code></a></p>
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1wu411T7dj/?spm_id_from=333.999.0.0&vd_source=b2af0f3a3b7d9e780991e4bef731fc85"><code>线性代数很难学？因为没有深刻理解这个概念(无痛线代)</code></a></p>
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1tN411Y7Ly/?spm_id_from=333.999.0.0&vd_source=b2af0f3a3b7d9e780991e4bef731fc85"><code>线性规划的艺术</code></a></p>
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1UB4y1b7ac/?spm_id_from=333.999.0.0&vd_source=b2af0f3a3b7d9e780991e4bef731fc85"><code>多元微积分3Blue1Brown</code></a></p>
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1984y12714/?spm_id_from=333.999.0.0&vd_source=b2af0f3a3b7d9e780991e4bef731fc85"><code>可视化ln(ab)=ln(a)+ln(b)</code></a></p>
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1iF411U7B6/?spm_id_from=333.999.0.0&vd_source=b2af0f3a3b7d9e780991e4bef731fc85"><code>从多项式逐步扩展速通常系数线性微分方程</code></a></p>
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV18P411a7Rx/?spm_id_from=333.999.0.0&vd_source=b2af0f3a3b7d9e780991e4bef731fc85"><code>如何计算任意数的阶乘</code></a></p>
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV15x4y1R7g4/?spm_id_from=333.999.0.0&vd_source=b2af0f3a3b7d9e780991e4bef731fc85"><code>仿射坐标系（斜坐标系）</code></a></p>
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Ny4y1o7xZ/?spm_id_from=333.337.search-card.all.click&vd_source=b2af0f3a3b7d9e780991e4bef731fc85"><code>椭圆的第零定义</code></a></p>
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1PM411g7o8/?spm_id_from=333.999.0.0&vd_source=b2af0f3a3b7d9e780991e4bef731fc85"><code>史上最好的群论入门</code></a></p>
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV11x4y1o7rQ/?spm_id_from=333.999.0.0&vd_source=b2af0f3a3b7d9e780991e4bef731fc85"><code>使用数学赋能过程动画</code></a></p>
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1114y1X72X/?spm_id_from=333.999.0.0&vd_source=b2af0f3a3b7d9e780991e4bef731fc85"><code>音乐和声音合成背后的数学基础</code></a></p>
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1YY4y1K7yP/?spm_id_from=333.999.0.0&vd_source=b2af0f3a3b7d9e780991e4bef731fc85"><code>贝塞尔曲线之美</code></a></p>
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1dP411r7Ve/?spm_id_from=333.999.0.0&vd_source=b2af0f3a3b7d9e780991e4bef731fc85"><code>为什么要使用样条曲线？</code></a></p>
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV16Z4y1U7oU/?spm_id_from=333.999.0.0&vd_source=b2af0f3a3b7d9e780991e4bef731fc85"><code>MIT线性代数</code></a></p>
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1cx411m78R/?spm_id_from=333.999.0.0"><code>微积分的本质</code></a></p>
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1ys411472E/?spm_id_from=333.999.0.0"><code>线性代数的本质</code></a></p>
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1tb411G72z/?spm_id_from=333.999.0.0"><code>微分方程概论</code></a></p>
+<h1 id="Vedio-uploaders"><a href="#Vedio-uploaders" class="headerlink" title="Vedio uploaders"></a>Vedio uploaders</h1><p><em>Bilibili</em><br><a target="_blank" rel="noopener" href="https://space.bilibili.com/266765166/?spm_id_from=333.999.0.0"><code>漫士沉思录</code></a></p>
+<p><a target="_blank" rel="noopener" href="https://space.bilibili.com/2057313067/?spm_id_from=333.999.0.0"><code>乐正垂星</code></a></p>
+<p><a target="_blank" rel="noopener" href="https://space.bilibili.com/88461692/?spm_id_from=333.999.0.0"><code>3Blue1Brown</code></a></p>
+<p><a target="_blank" rel="noopener" href="https://space.bilibili.com/3557916/?spm_id_from=333.999.0.0"><code>Solara570</code></a></p>
+<p><a target="_blank" rel="noopener" href="https://space.bilibili.com/513194466/?spm_id_from=333.999.0.0"><code>生姜DrGinger</code></a></p>
+<p><a target="_blank" rel="noopener" href="https://space.bilibili.com/400365390/?spm_id_from=333.999.0.0"><code>科技3D视界</code></a></p>
+<p><em>Youtube</em><br><a target="_blank" rel="noopener" href="https://www.youtube.com/@Acegikmo"><code>Freya Holmer</code></a></p>
+<p><a target="_blank" rel="noopener" href="https://www.youtube.com/@t3ssel8r/videos"><code>t3ssel8r</code></a></p>
+<h1 id="Websites"><a href="#Websites" class="headerlink" title="Websites"></a>Websites</h1><p><a target="_blank" rel="noopener" href="https://thenumb.at/Functions-are-Vectors/"><code>Functions are vectors</code></a></p>
+<p><a target="_blank" rel="noopener" href="https://www.3blue1brown.com/"><code>3Blue1Brown</code></a></p>
+<p><a target="_blank" rel="noopener" href="https://learnopengl-cn.github.io/01%20Getting%20started/07%20Transformations/"><code>Transformations</code></a></p>
+<h1 id="Books"><a href="#Books" class="headerlink" title="Books"></a>Books</h1><p><a target="_blank" rel="noopener" href="https://github.com/Visualize-ML/Book4_Power-of-Matrix"><code>Power of Matrix</code></a></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/Visualize-ML/Book3_Elements-of-Mathematics"><code>Element of Mathematics</code></a></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/zhimpcb/MathBooks"><code>Math Books</code></a></p>
+
+    </div>
+</article>
+        </main>
+        <aside class="aside">
+            <div class="close"></div>
+            <section class="aside-section">
+                
+    <h1>Categories</h1>
+
+    
+
+            </section>
+            <section class="aside-section">
+                
+
+            </section>
+            <section class="aside-section tag">
+                
+    <h1>Tags</h1>
+
+    <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Math/" rel="tag">Math</a></li></ul>
+
+            </section>
+        </aside>
+    </div>
+</body>
+
+</html>
